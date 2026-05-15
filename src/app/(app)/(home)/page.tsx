@@ -1,18 +1,7 @@
-import configPromise from "@payload-config";
-import { getPayload } from "payload";
-
-export default async function HomePage() {
-  const payload = await getPayload({
-    config: configPromise,
-  });
-
-  const data = await payload.find({
-    collection: "users",
-  });
-
+export default function HomePage() {
   return (
     <div className="w-full flex flex-col justify-center gap-4 p-5">
-      {JSON.stringify(data, null, 2)}
+      Home Page
     </div>
   );
 }
